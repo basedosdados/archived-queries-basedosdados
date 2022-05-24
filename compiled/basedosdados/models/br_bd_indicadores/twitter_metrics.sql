@@ -1,7 +1,9 @@
 
 
 
-SELECT
+SELECT *
+FROM
+(SELECT
 SAFE_CAST(upload_ts AS INT64) upload_ts,
 EXTRACT(DATE FROM TIMESTAMP_MILLIS(upload_ts*1000)) AS upload_day,
 SAFE_CAST(id AS STRING) id,
@@ -18,7 +20,7 @@ SAFE_CAST(following_count AS INT64) following_count,
 SAFE_CAST(followers_count AS INT64) followers_count,
 SAFE_CAST(tweet_count AS INT64) tweet_count,
 SAFE_CAST(listed_count AS INT64) listed_count
-FROM `basedosdados-dev.br_bd_indicadores_staging.twitter_metrics`
+FROM `basedosdados-dev.br_bd_indicadores_staging.twitter_metrics`)
 WHERE
-    upload_day < CURRENT_DATE('America/Sao_Paulo')
+    upload_day <= CURRENT_DATE('America/Sao_Paulo')
 
