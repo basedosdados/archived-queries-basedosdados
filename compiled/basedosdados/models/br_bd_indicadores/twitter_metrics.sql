@@ -24,3 +24,10 @@ FROM `basedosdados-dev.br_bd_indicadores_staging.twitter_metrics`)
 WHERE
     upload_day <= CURRENT_DATE('America/Sao_Paulo')
 
+
+
+
+
+AND
+    upload_day > ("2022-05-25")
+
