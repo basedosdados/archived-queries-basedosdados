@@ -29,5 +29,5 @@ WHERE
 
 
 AND
-    upload_day > ("2022-07-08")
+    upload_day > ("2022-07-25")
 
