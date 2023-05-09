@@ -1,5 +1,6 @@
 version: 2
 
+
 models:
   - name: municipio_exportacao
     description: Base de dados detalhada por município da empresa exportadora e Posição do Sistema Harmonizado (SH4)
