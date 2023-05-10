@@ -59,4 +59,4 @@ SAFE_CAST(taxa_policial_militar_morto_servico AS INT64) taxa_policial_militar_mo
 SAFE_CAST(taxa_policial_civil_morto_servico AS INT64) taxa_policial_civil_morto_servico,
 SAFE_CAST(taxa_registro_ocorrencia AS INT64) taxa_registro_ocorrencia,
 SAFE_CAST(tipo_fase AS STRING) tipo_fase
-FROM basedosdados-dev.br_rj_isp_estatisticas_seguranca_staging.taxa_evolucao_mensal_municipio AS t
+FROM basedosdados-staging.br_rj_isp_estatisticas_seguranca_staging.taxa_evolucao_mensal_municipio AS t

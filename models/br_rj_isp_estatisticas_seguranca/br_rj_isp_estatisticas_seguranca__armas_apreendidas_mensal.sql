@@ -12,8 +12,8 @@ Em resumo, o modelo dbt é uma ferramenta essencial em uma pipeline de dados por
 
 {{ config(alias='armas_apreendidas_mensal', schema='br_rj_isp_estatisticas_seguranca') }}
 SELECT 
-SAFE_CAST(ano AS STRING) ano,
-SAFE_CAST(mes AS STRING) mes,
+SAFE_CAST(ano AS INT64) ano,
+SAFE_CAST(mes AS INT64) mes,
 SAFE_CAST(id_cisp AS STRING) id_cisp,
 SAFE_CAST(id_aisp AS STRING) id_aisp,
 SAFE_CAST(id_risp AS STRING) id_risp,
@@ -29,4 +29,4 @@ SAFE_CAST(quantidade_pistola AS INT64) quantidade_pistola,
 SAFE_CAST(quantidade_revolver AS INT64) quantidade_revolver,
 SAFE_CAST(quantidade_submetralhadora AS INT64) quantidade_submetralhadora,
 SAFE_CAST(total AS INT64) total
-FROM basedosdados-dev.br_rj_isp_estatisticas_seguranca_staging.armas_apreendidas_mensal AS t
+FROM basedosdados-staging.br_rj_isp_estatisticas_seguranca_staging.armas_apreendidas_mensal AS t
