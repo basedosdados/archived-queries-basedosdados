@@ -99,4 +99,7 @@ models:
       +schema: br_bcb_estban 
     br_inmet_bdmep:
       +materialized: table
-      +schema: br_inmet_bdmep      
+      +schema: br_inmet_bdmep
+    br_me_comex_stat:
+      +materialized: table
+      +schema: br_me_comex_stat       
