@@ -6,7 +6,7 @@
       "granularity": "day"
     }
 )}}
-
+    
 select
 dia,
 parse_datetime('%Y-%m-%d %H:%M:%S', data_hora) as data_hora,
@@ -25,8 +25,10 @@ SAFE_CAST(desconto AS INT64) desconto,
 SAFE_CAST(envio_pais AS BOOL) envio_pais,
 SAFE_CAST(estrelas AS FLOAT64) estrelas,
 SAFE_CAST(preco AS FLOAT64) preco,
-SAFE_CAST(preco_original AS FLOAT64) preco_original,
-vendedor,
+SAFE_CAST(preco_original AS NUMERIC) preco_original,
+case
+  when vendedor='None' then null
+  else vendedor end as vendedor,
 secao_site,
 caracteristicas,
 from `basedosdados-staging.br_mercadolivre_ofertas_staging.item`
