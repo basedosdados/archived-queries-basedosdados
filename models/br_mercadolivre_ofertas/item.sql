@@ -1,3 +1,12 @@
+{{ config(
+    materialized='table',
+    partition_by={
+      "field": "dia",
+      "data_type": "date",
+      "granularity": "day"
+    }
+)}}
+
 select 
 parse_datetime('%Y-%m-%d %H:%M:%S', data_hora) as data_hora,
 titulo,
