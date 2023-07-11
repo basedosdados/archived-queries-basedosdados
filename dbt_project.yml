@@ -105,4 +105,7 @@ models:
       +schema: br_inmet_bdmep
     br_me_comex_stat:
       +materialized: table
-      +schema: br_me_comex_stat       
+      +schema: br_me_comex_stat
+    br_mercadolivre_ofertas:
+      +materialized: table
+      +schema: br_mercadolivre_ofertas
