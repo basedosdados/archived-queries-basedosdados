@@ -36,7 +36,7 @@ models:
   - name: vendedor
     description: informações de vendedores dos itens na tabela de oferta
     columns:
-      - name: id_vendor
+      - name: vendedor_id
         description: identificador único para o vendedor
       - name: nome
         description: nome do vendedor
