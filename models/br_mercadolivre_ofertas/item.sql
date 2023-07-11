@@ -7,7 +7,8 @@
     }
 )}}
 
-select 
+select
+dia,
 parse_datetime('%Y-%m-%d %H:%M:%S', data_hora) as data_hora,
 titulo,
 lpad(item_id, 12, '0') as item_id,
