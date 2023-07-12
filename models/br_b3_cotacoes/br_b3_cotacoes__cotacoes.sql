@@ -9,7 +9,7 @@ SAFE_CAST(data_negocio AS DATE) data_negocio,
 SAFE_CAST(codigo_identificador_negocio AS STRING) codigo_identificador_negocio,
 SAFE_CAST(preco_negocio AS FLOAT64) preco_negocio,
 SAFE_CAST(quantidade_negociada AS INT64) quantidade_negociada,
-SAFE_CAST(hora_fechamento AS INT64) hora_fechamento,
+SAFE_CAST(hora_fechamento AS STRING) hora_fechamento,
 SAFE_CAST(codigo_participante_comprador AS STRING) codigo_participante_comprador,
 SAFE_CAST(codigo_participante_vendedor AS STRING) codigo_participante_vendedor
 
