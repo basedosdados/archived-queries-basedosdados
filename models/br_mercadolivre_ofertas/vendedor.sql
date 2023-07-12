@@ -8,7 +8,7 @@
 )}}
 
 with main as (
-  select lpad(vendedor_id, 12, '0') as vendedor_id,
+  select lpad(vendedor_id, 16, '0') as vendedor_id,
   dia,
   nome,
   SAFE_CAST(experiencia AS INT64) experiencia,
