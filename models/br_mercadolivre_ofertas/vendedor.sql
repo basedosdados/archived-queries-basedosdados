@@ -22,7 +22,7 @@ with main as (
 
 predata as (
   select
-    lpad(vendedor_id, 12, '0') as vendedor_id,
+    lpad(vendedor_id, 16, '0') as vendedor_id,
     struct(
     json_extract_scalar(opinioes, '$.Bom') as Bom,
     json_extract_scalar(opinioes, '$.Regular') as Regular,
